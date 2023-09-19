@@ -9,6 +9,7 @@ import 'package:foodpanda_ui_clone/views/home/widgets/slidercardone.dart';
 import 'package:foodpanda_ui_clone/views/home/widgets/slidercardthree.dart';
 import 'package:foodpanda_ui_clone/views/home/widgets/top_restaurant.dart';
 import 'package:foodpanda_ui_clone/views/home/widgets/voucher.dart';
+import 'package:foodpanda_ui_clone/views/order_page/cart.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -58,7 +59,13 @@ class _HomeScreenState extends State<HomeScreen> {
             const Spacer(),
             IconButton(
                 onPressed: () {}, icon: Icon(Icons.favorite_border_outlined)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.card_travel))
+            IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Cart()));
+                  // Add your onPressed logic here
+                },
+                icon: Icon(Icons.card_travel))
           ],
         ),
       ),
