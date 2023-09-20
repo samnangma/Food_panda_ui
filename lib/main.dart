@@ -3,6 +3,7 @@ import 'package:foodpanda_ui_clone/views/deitialspage/product_detials.dart';
 import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
 import 'package:foodpanda_ui_clone/views/order_page/cart.dart';
 import 'package:foodpanda_ui_clone/views/order_page/checkout.dart';
+import 'package:foodpanda_ui_clone/views/search_page/seachpage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.poppins().fontFamily,
       ),
       debugShowCheckedModeBanner: false,
-      home: ProductDetailsPage(),
+      home: HomeScreen(),
     );
   }
 }

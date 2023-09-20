@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodpanda_ui_clone/views/deitialspage/product_detials.dart';
 import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
 
 class Cart extends StatelessWidget {
@@ -47,8 +48,10 @@ class Cart extends StatelessWidget {
               SizedBox(height: 12),
               ElevatedButton(
                 onPressed: () {
-                  // Add your button onPressed logic here
-                },
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ProductDetailsPage()));
+              // Add your onPressed logic here
+            },
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.pink[600]),
                 ),
