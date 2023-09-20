@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
+import 'package:foodpanda_ui_clone/views/order_page/order_lottie.dart';
 
 class CheckOut extends StatefulWidget {
   const CheckOut({super.key});
@@ -504,7 +505,8 @@ class _CheckOutState extends State<CheckOut> {
                             ),
                             Text(
                               "1x Milk Tea",
-                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                             Spacer(),
                             Text(
@@ -648,7 +650,12 @@ class _CheckOutState extends State<CheckOut> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Lotti()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.pink.shade600,
                     shape: RoundedRectangleBorder(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodpanda_ui_clone/views/deitialspage/product.dart';
-
+import 'package:foodpanda_ui_clone/views/order_page/viewcart_page.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   @override
@@ -31,7 +31,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     Product(
         name: "Coffee Product 2",
         description: "Description of Coffee Product 2."),
-            Product(
+    Product(
         name: "Coffee Product 1",
         description: "Description of Coffee Product 1."),
     Product(
@@ -241,8 +241,9 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     productTitles[index],
                     style: TextStyle(
                       fontSize: 18,
-                      color:
-                          index == currentTabIndex ? Colors.pink[600] : Colors.black,
+                      color: index == currentTabIndex
+                          ? Colors.pink[600]
+                          : Colors.black,
                     ),
                   ),
                 ),
@@ -267,43 +268,51 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           ),
         ),
       ]),
-      bottomNavigationBar: Container(
-        width: double.infinity,
-        height: 80,
-        decoration: const BoxDecoration(color: Colors.white),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Container(
-            decoration: const BoxDecoration(
-                color: Colors.pinkAccent,
-                borderRadius: BorderRadius.all(Radius.circular(10))),
-            child: const Padding(
-              padding: EdgeInsets.all(15.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "1",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 18),
-                  ),
-                  Text(
-                    "View your cart",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  ),
-                  Text(
-                    "\$ 2.25",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  )
-                ],
+      bottomNavigationBar: GestureDetector(
+        onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ViewCartPage()),
+    );
+  },
+        child: Container(
+          width: double.infinity,
+          height: 80,
+          decoration: const BoxDecoration(color: Colors.white),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.pinkAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+              child: const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "1",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 18),
+                    ),
+                    Text(
+                      "View your cart",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                    Text(
+                      "\$ 2.25",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -349,6 +358,3 @@ class Product {
 
   Product({required this.name, required this.description});
 }
-
-
-  

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodpanda_ui_clone/views/deitialspage/product_detials.dart';
 import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
-import 'package:foodpanda_ui_clone/views/order_page/cart.dart';
-import 'package:foodpanda_ui_clone/views/order_page/checkout.dart';
-import 'package:foodpanda_ui_clone/views/search_page/seachpage.dart';
+import 'package:foodpanda_ui_clone/views/order_page/order_lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 
 void main() {
   runApp(const MyApp());
