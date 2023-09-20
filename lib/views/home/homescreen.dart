@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:foodpanda_ui_clone/views/deitialspage/product_detials.dart';
-import 'package:foodpanda_ui_clone/views/home/widgets/cus_sliverbanner.dart';
-import 'package:foodpanda_ui_clone/views/home/widgets/gridfood.dart';
+import 'package:foodpanda_ui_clone/views/home/widgets/banner_cusqppbar.dart';
+import 'package:foodpanda_ui_clone/views/home/widgets/display_food.dart';
 import 'package:foodpanda_ui_clone/views/home/widgets/mydrawer_cus.dart';
-import 'package:foodpanda_ui_clone/views/home/widgets/near_restaurant.dart';
+import 'package:foodpanda_ui_clone/views/home/widgets/near_food_restaurant.dart';
 import 'package:foodpanda_ui_clone/views/home/widgets/slidercardone.dart';
-import 'package:foodpanda_ui_clone/views/home/widgets/slidercardthree.dart';
-import 'package:foodpanda_ui_clone/views/home/widgets/top_restaurant.dart';
+import 'package:foodpanda_ui_clone/views/home/widgets/slidercardtwoandthree.dart';
+import 'package:foodpanda_ui_clone/views/home/widgets/popular_restaurant.dart';
 import 'package:foodpanda_ui_clone/views/home/widgets/voucher.dart';
 import 'package:foodpanda_ui_clone/views/order_page/cart.dart';
 

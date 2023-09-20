@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foodpanda_ui_clone/views/order_page/order_lottie.dart';
+import 'package:foodpanda_ui_clone/views/order_page/order_final_screen.dart';
 import 'package:foodpanda_ui_clone/views/order_page/viewcart_page.dart';
 
 class CheckOut extends StatefulWidget {
@@ -16,6 +16,7 @@ class _CheckOutState extends State<CheckOut> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: false,
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -503,7 +504,7 @@ class _CheckOutState extends State<CheckOut> {
                               width: 10,
                             ),
                             Text(
-                              "1x Milk Tea",
+                              "2x Milk Tea",
                               style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),

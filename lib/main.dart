@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
-import 'package:foodpanda_ui_clone/views/order_page/order_lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 

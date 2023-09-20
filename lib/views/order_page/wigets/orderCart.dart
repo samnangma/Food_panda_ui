@@ -48,10 +48,10 @@ class OrderCart extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 30),
                   children: <TextSpan>[
                     TextSpan(
-                        text: '\$ 1.00 ',
+                        text: '\$ 3.75 ',
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     TextSpan(
-                        text: '\$ 1.25',
+                        text: '\$ 4.80',
                         style: TextStyle(
                             decoration: TextDecoration.lineThrough,
                             color: Colors.black45))
@@ -60,7 +60,7 @@ class OrderCart extends StatelessWidget {
                 textScaleFactor: 0.5,
               ),
               const Text(
-                "Grilled Butter Bread",
+                "Milk Tea Top 1",
                 style: TextStyle(fontSize: 12),
               )
             ],

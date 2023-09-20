@@ -18,41 +18,22 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
 
   // Sample data for products in each category
   List<Product> popularProducts = [
-    Product(name: "Product 1", description: "Description of Product 1."),
-    Product(name: "Product 2", description: "Description of Product 2."),
-    Product(name: "Product 1", description: "Description of Product 1."),
-    Product(name: "Product 2", description: "Description of Product 2."),
+    Product(name: "", description: ""),
+    Product(name: "", description: ""),
+    Product(name: "", description: ""),
+    // Product(name: "", description: ""),
   ];
 
   List<Product> coffeeProducts = [
-    Product(
-        name: "Coffee Product 1",
-        description: "Description of Coffee Product 1."),
-    Product(
-        name: "Coffee Product 2",
-        description: "Description of Coffee Product 2."),
-    Product(
-        name: "Coffee Product 1",
-        description: "Description of Coffee Product 1."),
-    Product(
-        name: "Coffee Product 2",
-        description: "Description of Coffee Product 2."),
-  ];
-
-  List<Product> teaProducts = [
-    Product(
-        name: "Tea Product 1", description: "Description of Tea Product 1."),
-    Product(
-        name: "Tea Product 2", description: "Description of Tea Product 2."),
+    Product(name: "", description: ""),
+    Product(name: "", description: ""),
+    Product(name: "", description: ""),
+    // Product(name: "", description: ""),
   ];
 
   List<Product> milkTeaProducts = [
-    Product(
-        name: "MilkTea Product 1",
-        description: "Description of Tea Product 1."),
-    Product(
-        name: "MilkTea Product 2",
-        description: "Description of Tea Product 2."),
+    Product(name: "", description: ""),
+    Product(name: "", description: ""),
   ];
 
   @override
@@ -88,10 +69,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             )
           ],
         ),
-        actions: const [
+        actions: [
           Icon(
             Icons.favorite_border_outlined,
-            color: Colors.pinkAccent,
+            color: Colors.pink.shade600,
             size: 30,
           ),
           SizedBox(
@@ -99,7 +80,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           ),
           Icon(
             Icons.search,
-            color: Colors.pinkAccent,
+            color: Colors.pink.shade600,
             size: 35,
           ),
           SizedBox(
@@ -129,7 +110,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       text: const TextSpan(
                         style: TextStyle(color: Colors.black54, fontSize: 36),
                         children: <TextSpan>[
-                          TextSpan(text: '1.8km away |'),
+                          TextSpan(text: '1.2 km away |'),
                           TextSpan(
                               text: ' Free delivery',
                               style: TextStyle(fontWeight: FontWeight.bold))
@@ -137,10 +118,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       ),
                       textScaleFactor: 0.5,
                     ),
-                    const Text(
+                    Text(
                       "More info",
                       style: TextStyle(
-                          color: Colors.pinkAccent,
+                          color: Colors.pink.shade600,
                           fontWeight: FontWeight.bold),
                     )
                   ],
@@ -165,12 +146,12 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                             style: TextStyle(fontSize: 36),
                             children: <TextSpan>[
                               TextSpan(
-                                  text: '4.8',
+                                  text: '4.3',
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black)),
                               TextSpan(
-                                  text: ' .79 ratings',
+                                  text: '  | 99 ratings',
                                   style: TextStyle(color: Colors.black54)),
                             ],
                           ),
@@ -178,10 +159,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                         ),
                       ],
                     ),
-                    const Text(
+                    Text(
                       "See reviews",
                       style: TextStyle(
-                          color: Colors.pinkAccent,
+                          color: Colors.pink.shade600,
                           fontWeight: FontWeight.bold),
                     )
                   ],
@@ -252,29 +233,37 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           ),
         ),
         Expanded(
-          child: PageView.builder(
-            controller: _pageController,
-            scrollDirection: Axis.vertical,
-            itemCount: productTitles.length,
-            itemBuilder: (context, index) {
-              return Container(
-                width: MediaQuery.of(context).size.width *
-                    0.8, // Adjust the width of each section
-                margin: EdgeInsets.symmetric(
-                    vertical: 8.0), // Adjust vertical spacing here
-                child: _buildProductSection(index),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ViewCartPage()),
               );
             },
+            child: PageView.builder(
+              controller: _pageController,
+              scrollDirection: Axis.vertical,
+              itemCount: productTitles.length,
+              itemBuilder: (context, index) {
+                return Container(
+                  width: MediaQuery.of(context).size.width *
+                      0.8, // Adjust the width of each section
+                  margin: const EdgeInsets.symmetric(
+                      vertical: 8.0), // Adjust vertical spacing here
+                  child: _buildProductSection(index),
+                );
+              },
+            ),
           ),
-        ),
+        )
       ]),
       bottomNavigationBar: GestureDetector(
         onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ViewCartPage()),
-    );
-  },
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ViewCartPage()),
+          );
+        },
         child: Container(
           width: double.infinity,
           height: 80,
@@ -282,8 +271,8 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
-              decoration: const BoxDecoration(
-                  color: Colors.pinkAccent,
+              decoration: BoxDecoration(
+                  color: Colors.pink.shade600,
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: const Padding(
                 padding: EdgeInsets.all(15.0),
@@ -305,7 +294,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                           fontSize: 18),
                     ),
                     Text(
-                      "\$ 2.25",
+                      "\$ 3.75",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -343,8 +332,6 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       case 1:
         return coffeeProducts;
       case 2:
-        return teaProducts;
-      case 3:
         return milkTeaProducts;
       default:
         return [];

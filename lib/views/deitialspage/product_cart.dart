@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 class ProductCart extends StatelessWidget {
   const ProductCart({super.key});
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -21,27 +22,31 @@ class ProductCart extends StatelessWidget {
           ),
           //sth above the image
           const Positioned(
-            height: 30,
+              height: 30,
               top: 20,
               left: 10,
               child: Text(
                 "Milk Tea",
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 22),
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22),
               )),
           Positioned(
               bottom: 10,
               right: 10,
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.black26),
-                  color: Colors.white
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Colors.black26),
+                    color: Colors.white),
                 child: const Padding(
                   padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 10),
                   child: Text(
-                    "from \$ 1.75",
-                    style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,
+                    "from \$ 3.65",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),

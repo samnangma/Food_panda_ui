@@ -43,6 +43,7 @@ class ProductSection extends StatelessWidget {
                 },
               )
             else
+              // ignore: unused_local_variable
               for (var product in products)
                 Container(
                   width: double.infinity,
