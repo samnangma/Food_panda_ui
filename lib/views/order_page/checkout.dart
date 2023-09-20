@@ -1,8 +1,7 @@
-import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
 import 'package:foodpanda_ui_clone/views/order_page/order_lottie.dart';
+import 'package:foodpanda_ui_clone/views/order_page/viewcart_page.dart';
 
 class CheckOut extends StatefulWidget {
   const CheckOut({super.key});
@@ -22,7 +21,7 @@ class _CheckOutState extends State<CheckOut> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => ViewCartPage()),
               );
             },
           ),

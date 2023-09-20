@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodpanda_ui_clone/views/deitialspage/product_detials.dart';
+import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
 import 'package:foodpanda_ui_clone/views/order_page/checkout.dart';
 import 'package:foodpanda_ui_clone/views/order_page/wigets/orderCart.dart';
 
@@ -18,10 +19,18 @@ class _ViewCartPageState extends State<ViewCartPage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 70,
-        leading: const Icon(
-          Icons.close,
-          color: Colors.pinkAccent,
-          size: 30,
+        leading:  GestureDetector(
+             onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
+          },
+          child: const Icon(
+            Icons.close,
+            color: Colors.pinkAccent,
+            size: 30,
+          ),
         ),
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,

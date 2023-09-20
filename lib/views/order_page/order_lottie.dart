@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodpanda_ui_clone/views/home/homescreen.dart';
 import 'package:lottie/lottie.dart';
 
 class Lotti extends StatefulWidget {
@@ -15,7 +16,10 @@ class _LottiState extends State<Lotti> {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {
-            // Add your close button action here
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
           },
           icon: Icon(
             Icons.close,

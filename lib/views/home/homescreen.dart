@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.white,
       key: _scaffoldKey,
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle(
@@ -245,6 +245,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 height: 80,
                 decoration: BoxDecoration(
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.black12, width: 2.0)),
                 child: Row(
